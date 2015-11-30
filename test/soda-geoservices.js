@@ -59,8 +59,15 @@ describe('filter', function () {
   })
 
   it('$where filters', function () {
-    var query = convert('$where=foo = 1 and baz="quz"')
-    query.should.have.property('where', "foo = 1 AND baz = 'quz'")
+    var query = convert('$where=foo > 1 and baz="quz"')
+    query.should.have.property('where', "foo > 1 AND baz = 'quz'")
+  })
+
+  // https://dev.socrata.com/docs/functions/within_box.html
+  it('within_box', function () {
+    var query = convert('$where=within_box(location, 46, -122, 47, -123)')
+    query.should.have.property('geometryType', 'esriGeometryEnvelope')
+    query.should.have.property('geometry', [-122, 46, -123, 47])
   })
 })
 
