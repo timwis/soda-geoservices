@@ -68,9 +68,34 @@ describe('filter', function () {
     var query = convert('$where=within_box(location, 46, -122, 47, -123)')
     query.should.have.property('geometryType', 'esriGeometryEnvelope')
     query.should.have.property('geometry', [-122, 46, -123, 47])
+    query.where.should.be.eql('1 = 1')
+  })
+
+  // https://dev.socrata.com/docs/functions/within_circle.html
+  it('within_circle', function () {
+    var query = convert('$where=within_circle(location, 47, -122, 500)')
+    query.should.have.property('geometry', [-122, 47])
+    query.should.have.property('distance', 500)
+    // query.should.have.property('units', 'meters') // not documented
+    query.where.should.be.eql('1 = 1')
+  })
+})
+
+describe('sorting', function () {
+  it('order by', function () {
+    var query = convert('$order=foo, bar desc')
+    query.should.have.property('orderByFields', 'foo, bar desc')
   })
 })
 
 describe('pagination', function () {
+  it('limit', function () {
+    var query = convert('$limit=5000')
+    query.should.have.property('resultRecordCount', 5000)
+  })
 
+  it('offset', function () {
+    var query = convert('$offset=100')
+    query.should.have.property('resultOffset', 100)
+  })
 })
