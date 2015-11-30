@@ -82,7 +82,7 @@ describe('filter', function () {
 
   it('between', function () {
     var query = convert('$where=salary between 40000 and 60000')
-    query.where.should.be.eql('salary > 40000 AND salary < 60000')
+    query.where.should.be.eql('salary BETWEEN 40000 AND 60000')
   })
 })
 
