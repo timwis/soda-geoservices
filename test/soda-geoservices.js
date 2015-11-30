@@ -70,6 +70,18 @@ describe('select', function () {
   it('lower/upper case', function () {
     var query = convert('$select=lower(foo)')
   })*/
+
+  it('extent', function () {
+    var query = convert('$select=extent(location)')
+    query.should.have.property('returnExtentOnly', true)
+    query.outFields.should.eql([])
+  })
+
+  it('extent with count', function () {
+    var query = convert('$select=count(*), extent(location)')
+    query.should.have.property('returnExtentOnly', true)
+    query.should.have.property('returnCountOnly', true)
+  })
 })
 
 describe('filter', function () {
