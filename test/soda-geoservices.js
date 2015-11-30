@@ -79,6 +79,11 @@ describe('filter', function () {
     // query.should.have.property('units', 'meters') // not documented
     query.where.should.be.eql('1 = 1')
   })
+
+  it('between', function () {
+    var query = convert('$where=salary between 40000 and 60000')
+    query.where.should.be.eql('salary > 40000 AND salary < 60000')
+  })
 })
 
 describe('sorting', function () {
