@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
-    "test": "npm run lint && ./node_modules/mocha/bin/mocha test"
+    "test": "./node_modules/mocha/bin/mocha test"
   },
   "author": "timwis <tim@timwis.com>",
   "license": "MIT",
