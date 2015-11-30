@@ -16,5 +16,5 @@ those provided by the SODA2 spec.
 2. Run the tests via `npm run --silent test`
 
 ## References
-* [GeoServices Documentation](http://resources.arcgis.com/en/help/rest/apiref/)
+* [GeoServices Documentation](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Map_Service_Layer/02r3000000p1000000/)
 * [SODA2 Documentation](https://dev.socrata.com/docs/queries/)
