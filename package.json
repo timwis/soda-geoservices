@@ -4,7 +4,8 @@
   "description": "Query Esri Geoservices using a SODA2-style API",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test"
+    "lint": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
+    "test": "npm run lint && ./node_modules/mocha/bin/mocha test"
   },
   "author": "timwis <tim@timwis.com>",
   "license": "MIT",
@@ -13,6 +14,8 @@
   },
   "devDependencies": {
     "mocha": "^2.3.4",
-    "should": "^7.1.1"
+    "should": "^7.1.1",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1"
   }
 }
