@@ -21,13 +21,33 @@ describe('select', function () {
     var query = convert('$select=foo * 3 AS bar')
   })*/
 
-  it('aggregation', function () {
+  it('aggregation: sum', function () {
     // count, sum, avg, stddev, var, min, max
     var query = convert('$select=foo, sum(bar)')
     query.should.have.property('outStatistics', [{
       statisticType: 'sum',
       onStatisticField: 'bar',
       outStatisticFieldName: 'sum_bar'
+    }])
+  })
+
+  it('aggregation: uppercase', function () {
+    // count, sum, avg, stddev, var, min, max
+    var query = convert('$select=foo, SUM(bar)')
+    query.should.have.property('outStatistics', [{
+      statisticType: 'SUM',
+      onStatisticField: 'bar',
+      outStatisticFieldName: 'sum_bar'
+    }])
+  })
+
+  it('aggregation: count(*)', function () {
+    // count, sum, avg, stddev, var, min, max
+    var query = convert('$select=foo, count(*)')
+    query.should.have.property('outStatistics', [{
+      statisticType: 'COUNT',
+      onStatisticField: 'OBJECTID',
+      outStatisticFieldName: 'count'
     }])
   })
 
