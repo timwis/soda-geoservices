@@ -81,6 +81,7 @@ describe('select', function () {
     var query = convert('$select=count(*), extent(location)')
     query.should.have.property('returnExtentOnly', true)
     query.should.have.property('returnCountOnly', true)
+    query.outFields.should.eql([])
   })
 })
 
