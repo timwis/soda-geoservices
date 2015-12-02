@@ -137,9 +137,15 @@ describe('where functions', function () {
 
   // it('not between', function () {})
 
-  // it('in', function() {})
+  it('in', function () {
+    var query = convert("$where=foo in ('bar', 'baz')")
+    query.where.should.be.eql("foo IN ('bar', 'baz')")
+  })
 
-  // it('not in', function () {})
+  it('not in', function () {
+    var query = convert("$where=foo not in ('bar', 'baz')")
+    query.where.should.be.eql("foo NOT IN ('bar', 'baz')")
+  })
 
   it('starts with', function () {
     var query = convert("$where=starts_with(foo, 'bar')")
