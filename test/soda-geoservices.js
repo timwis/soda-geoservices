@@ -33,7 +33,10 @@ describe('where', function () {
     query.should.have.property('where', "foo > 1 AND baz = 'quz'")
   })
 
-  // it('order of operations', function() {})
+  it('order of operations', function () {
+    var query = convert('$where=foo = 1 and (bar = 2 or baz = 3)')
+    query.should.have.property('where', 'foo = 1 AND (bar = 2 OR baz = 3)')
+  })
 })
 
 describe('group', function () {
