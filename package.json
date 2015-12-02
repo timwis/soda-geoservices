@@ -14,6 +14,7 @@
     "dotenv": "^1.2.0",
     "lodash": "^3.10.1",
     "node-soda2-parser": "github:timwis/node-soda2-parser",
+    "request": "^2.67.0",
     "restify": "^4.0.3"
   },
   "devDependencies": {
