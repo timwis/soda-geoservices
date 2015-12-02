@@ -1,6 +1,6 @@
 /* global describe, it */
 require('should')
-var convert = require('../index')
+var convert = require('../convert')
 // var inspect = function (data) {
 //   console.log(require('util').inspect(data, false, 10, true))
 // }

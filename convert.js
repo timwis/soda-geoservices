@@ -1,6 +1,6 @@
 var qs = require('querystring')
 var Parser = require('node-soda2-parser')
-var processors = {
+var converters = {
   select: require('./lib/select'),
   where: require('./lib/where')
 }
@@ -14,14 +14,14 @@ module.exports = function (input) {
     where: '1=1'
   }
 
-  query.outFields = processors.select(ast.columns, query)
+  query.outFields = converters.select(ast.columns, query)
 
   if (ast.groupby && ast.groupby.length) {
     query.groupByFieldsForStatistics = ast.groupby[0].column
   }
 
   if (ast.where) {
-    ast.where = processors.where(ast.where, query)
+    ast.where = converters.where(ast.where, query)
     query.where = Parser.stringify.where(ast.where)
   }
 
@@ -30,11 +30,11 @@ module.exports = function (input) {
   }
 
   if (params.$limit) {
-    query.resultRecordCount = +params.$limit
+    query.resultRecordCount = params.$limit
   }
 
   if (params.$offset) {
-    query.resultOffset = +params.$offset
+    query.resultOffset = params.$offset
   }
 
   return query
