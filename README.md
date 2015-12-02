@@ -19,3 +19,5 @@ those provided by the SODA2 spec.
 ## References
 * [GeoServices Documentation](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Map_Service_Layer/02r3000000p1000000/)
 * [SODA2 Documentation](https://dev.socrata.com/docs/queries/)
+* [Supported functions for ArcGIS Server](http://resources.arcgis.com/en/help/main/10.2/index.html#//015400000686000000) (v10.2)
+* [Validate SQL](https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/APPEALS_LIRB/FeatureServer/0/validateSQL)
