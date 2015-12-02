@@ -10,11 +10,14 @@ module.exports = function (input) {
   var ast = Parser.parse(params)
   var query = {
     outFields: '*',
-    outStatistics: [],
     where: '1=1'
   }
 
   query.outFields = converters.select(ast.columns, query)
+
+  if (query.outStatistics) {
+    query.outStatistics = JSON.stringify(query.outStatistics)
+  }
 
   if (ast.groupby && ast.groupby.length) {
     query.groupByFieldsForStatistics = ast.groupby[0].column

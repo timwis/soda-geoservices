@@ -53,36 +53,40 @@ describe('group', function () {
   it('aggregation', function () {
     // count, sum, avg, stddev, var, min, max
     var query = convert('$select=foo, sum(bar)')
-    query.should.have.property('outStatistics', [{
+    query.should.have.property('outStatistics', JSON.stringify([{
       statisticType: 'sum',
       onStatisticField: 'bar',
       outStatisticFieldName: 'sum_bar'
-    }])
+    }]))
   })
 
   it('aggregation with uppercase function name', function () {
     // count, sum, avg, stddev, var, min, max
     var query = convert('$select=foo, SUM(bar)')
-    query.should.have.property('outStatistics', [{
+    query.should.have.property('outStatistics', JSON.stringify([{
       statisticType: 'SUM',
       onStatisticField: 'bar',
       outStatisticFieldName: 'sum_bar'
-    }])
+    }]))
   })
 
   it('aggregation with wildcard', function () {
     // count, sum, avg, stddev, var, min, max
     var query = convert('$select=foo, count(*)')
-    query.should.have.property('outStatistics', [{
+    query.should.have.property('outStatistics', JSON.stringify([{
       statisticType: 'COUNT',
       onStatisticField: 'OBJECTID',
       outStatisticFieldName: 'count'
-    }])
+    }]))
   })
 
   it('aggregation with aliases', function () {
     var query = convert('$select=sum(foo) AS bar')
-    query.outStatistics[0].should.have.property('outStatisticFieldName', 'bar')
+    query.should.have.property('outStatistics', JSON.stringify([{
+      statisticType: 'sum',
+      onStatisticField: 'foo',
+      outStatisticFieldName: 'bar'
+    }]))
   })
 })
 
