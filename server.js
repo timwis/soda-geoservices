@@ -2,7 +2,7 @@ var process = require('process')
 var restify = require('restify')
 var request = require('request')
 var convert = require('./convert')
-require('dotenv').load()
+require('dotenv').load({silent: true})
 
 var PORT = process.env.PORT || 8080
 var IP = process.env.IP || '127.0.0.1'
