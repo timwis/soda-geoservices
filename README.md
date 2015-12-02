@@ -1,7 +1,7 @@
 # SODA GeoServices
 Query [Esri Geoservices](http://geoservices.github.io/) using a [SODA2](https://dev.socrata.com/docs/queries/)-style API
 
-This is still a work in progress. Check out the [progress](timwis/soda-geoservices#1) and [tests](test/soda-geoservices.js) to get an idea for the functionality.
+This is still a work in progress. Check out the [progress](issues/1) and [tests](test/soda-geoservices.js) to get an idea for the functionality.
 
 ## Why?
 Geoservices are incredibly powerful but have a complex query structure as a result, and
