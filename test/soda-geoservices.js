@@ -94,12 +94,12 @@ describe('other', function () {
 
   it('limit', function () {
     var query = convert('$limit=5000')
-    query.should.have.property('resultRecordCount', 5000)
+    query.should.have.property('resultRecordCount', '5000')
   })
 
   it('offset', function () {
     var query = convert('$offset=100')
-    query.should.have.property('resultOffset', 100)
+    query.should.have.property('resultOffset', '100')
   })
 
   // it('free-text search', function () {})
