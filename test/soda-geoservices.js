@@ -135,7 +135,11 @@ describe('where functions', function () {
     query.where.should.be.eql('salary BETWEEN 40000 AND 60000')
   })
 
-  // it('not between', function () {})
+  /* not supported by node-soda2-parser (specifically, its underlying grammar)
+  it('not between', function () {
+    var query = convert('$where=salary not between 40000 and 60000')
+    query.where.should.be.eql('salary NOT BETWEEN 40000 AND 60000')
+  })*/
 
   it('in', function () {
     var query = convert("$where=foo in ('bar', 'baz')")
@@ -171,5 +175,8 @@ describe('where functions', function () {
     query.where.should.be.eql('1 = 1')
   })
 
-  // it('within polygon', function () {})
+  /* not sure whether to use Multipoint or Polygon
+  it('within polygon', function () {
+    var query = convert("$where=within_polygon(location, 'MULTIPOLYGON (((-1.1 2.1, -3.1 4.1, -5.1 6.1, -7.1 8.1)))')")
+  })*/
 })
