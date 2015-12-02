@@ -117,6 +117,11 @@ describe('filter', function () {
     var query = convert('$where=salary between 40000 and 60000')
     query.where.should.be.eql('salary BETWEEN 40000 AND 60000')
   })
+
+  it('starts with', function () {
+    var query = convert("$where=starts_with(foo, 'bar')")
+    query.where.should.be.eql("foo LIKE 'bar%'")
+  })
 })
 
 describe('sorting', function () {
