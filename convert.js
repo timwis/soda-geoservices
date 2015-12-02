@@ -6,11 +6,12 @@ var converters = {
 }
 
 module.exports = function (input) {
-  var params = qs.parse(input)
+  var params = typeof input === 'string' ? qs.parse(input) : input
   var ast = Parser.parse(params)
   var query = {
     outFields: '*',
-    where: '1=1'
+    where: '1=1',
+    f: 'json'
   }
 
   query.outFields = converters.select(ast.columns, query)

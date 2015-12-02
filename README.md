@@ -1,4 +1,6 @@
 # SODA GeoServices
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 Query [Esri Geoservices](http://geoservices.github.io/) using a [SODA2](https://dev.socrata.com/docs/queries/)-style API
 
 This is still a work in progress. Check out the [list of features](https://github.com/timwis/soda-geoservices/issues/1) and 
@@ -14,7 +16,18 @@ those provided by the SODA2 spec.
 
 ## Usage
 1. Clone this repo and install dependencies via `npm install`
-2. Run the tests via `npm test`
+2. Copy `.env.sample` to `.env` and fill in `PROXY_TO` with the path to your Geoservices (ex. `http://maps2.dcgis.dc.gov/dcgis/rest/services/`)
+3. Run the server via `npm run server`
+4. Append the service to your URL and use SODA2 querystring parameters
+
+For example:
+```
+http://localhost:8080/DDOT/AlleyConditions/MapServer/0?alley_material=Asphalt
+```
+
+## Development
+* Write tests first and run them via `npm test`
+* Lint the code style via `npm run lint` (uses [standard](http://standardjs.com))
 
 ## References
 * [GeoServices Documentation](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Map_Service_Layer/02r3000000p1000000/)

@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
-    "test": "./node_modules/mocha/bin/mocha test"
+    "test": "./node_modules/mocha/bin/mocha test",
+    "server": "node server.js"
   },
   "author": "timwis <tim@timwis.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^1.2.0",
     "lodash": "^3.10.1",
-    "node-soda2-parser": "github:timwis/node-soda2-parser"
+    "node-soda2-parser": "github:timwis/node-soda2-parser",
+    "restify": "^4.0.3"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
