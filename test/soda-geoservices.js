@@ -6,9 +6,14 @@ var convert = require('../convert')
 // }
 
 describe('select', function () {
+  it('all fields', function () {
+    var query = convert('$select=*')
+    query.should.have.property('outFields', '*')
+  })
+
   it('multiple fields', function () {
     var query = convert('$select=foo, bar')
-    query.should.have.property('outFields', ['foo', 'bar'])
+    query.should.have.property('outFields', 'foo, bar')
   })
 
   /* must be done in post-processing
@@ -104,14 +109,14 @@ describe('select functions', function () {
   it('extent', function () {
     var query = convert('$select=extent(location)')
     query.should.have.property('returnExtentOnly', true)
-    query.outFields.should.eql([])
+    query.outFields.should.eql('')
   })
 
   it('extent with count', function () {
     var query = convert('$select=count(*), extent(location)')
     query.should.have.property('returnExtentOnly', true)
     query.should.have.property('returnCountOnly', true)
-    query.outFields.should.eql([])
+    query.outFields.should.eql('')
   })
 
   // it('convex hull', function () {})
