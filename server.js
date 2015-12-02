@@ -5,7 +5,6 @@ var convert = require('./convert')
 require('dotenv').load({silent: true})
 
 var PORT = process.env.PORT || 8080
-var IP = process.env.IP || '127.0.0.1'
 var PROXY_TO = process.env.PROXY_TO.replace(/\/$/, '') // remove trailing slash
 
 var server = restify.createServer({ name: require('./package.json').name })
@@ -33,6 +32,6 @@ server.get(/^\/(.*)/, function (req, res, next) {
   })
 })
 
-server.listen(PORT, IP, function () {
+server.listen(PORT, function () {
   console.log('%s listening at %s', server.name, server.url)
 })
