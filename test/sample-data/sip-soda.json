@@ -1,0 +1,46 @@
+[
+  {
+    "OBJECTID": 66,
+    "Match_addr": "126 N 10TH ST, 19107",
+    "Corridor": "Chinatown",
+    "Applicant": "IP Novelty, Inc.",
+    "Business_N": "China Art Company",
+    "Property_A": "126-130 North 10th Street",
+    "SIP_Award": 12000,
+    "Invoice_Ap": 20110617,
+    "Check_Amou": 12000,
+    "Funded_By": "CDBG",
+    "Relations": "Philadelphia Chinatown Development Corporation",
+    "ID": 66,
+    "PCPC_Num": 5,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2695564.7426469177,
+        236893.43132084608
+      ]
+    }
+  },
+  {
+    "OBJECTID": 79,
+    "Match_addr": "1034 SPRING ST, 19107",
+    "Corridor": "Chinatown",
+    "Applicant": "Carol Wong",
+    "Business_N": "Chinatown Learning Center",
+    "Property_A": "1034 Spring Street",
+    "SIP_Award": 2500,
+    "Invoice_Ap": 20110804,
+    "Check_Amou": 2440,
+    "Funded_By": "BOND FUND",
+    "Relations": "Philadelphia Chinatown Development Corporation",
+    "ID": 79,
+    "PCPC_Num": 5,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        2695370.725318417,
+        237530.0596407503
+      ]
+    }
+  }
+]

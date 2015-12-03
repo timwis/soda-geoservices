@@ -1,0 +1,166 @@
+{
+    "objectIdFieldName": "OBJECTID",
+    "globalIdFieldName": "",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+        "wkid": 102729,
+        "latestWkid": 2272
+    },
+    "fields": [
+        {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Match_addr",
+            "type": "esriFieldTypeString",
+            "alias": "Match_addr",
+            "sqlType": "sqlTypeOther",
+            "length": 120,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Corridor",
+            "type": "esriFieldTypeString",
+            "alias": "Corridor",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Applicant",
+            "type": "esriFieldTypeString",
+            "alias": "Applicant",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Business_N",
+            "type": "esriFieldTypeString",
+            "alias": "Business_N",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Property_A",
+            "type": "esriFieldTypeString",
+            "alias": "Property_A",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "SIP_Award",
+            "type": "esriFieldTypeInteger",
+            "alias": "SIP_Award",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Invoice_Ap",
+            "type": "esriFieldTypeInteger",
+            "alias": "Invoice_Ap",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Check_Amou",
+            "type": "esriFieldTypeInteger",
+            "alias": "Check_Amou",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Funded_By",
+            "type": "esriFieldTypeString",
+            "alias": "Funded_By",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "Relations",
+            "type": "esriFieldTypeString",
+            "alias": "Relations",
+            "sqlType": "sqlTypeOther",
+            "length": 254,
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "ID",
+            "type": "esriFieldTypeInteger",
+            "alias": "ID",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        },
+        {
+            "name": "PCPC_Num",
+            "type": "esriFieldTypeSmallInteger",
+            "alias": "PCPC_Num",
+            "sqlType": "sqlTypeOther",
+            "domain": null,
+            "defaultValue": null
+        }
+    ],
+    "features": [
+        {
+            "attributes": {
+                "OBJECTID": 66,
+                "Match_addr": "126 N 10TH ST, 19107",
+                "Corridor": "Chinatown",
+                "Applicant": "IP Novelty, Inc.",
+                "Business_N": "China Art Company",
+                "Property_A": "126-130 North 10th Street",
+                "SIP_Award": 12000,
+                "Invoice_Ap": 20110617,
+                "Check_Amou": 12000,
+                "Funded_By": "CDBG",
+                "Relations": "Philadelphia Chinatown Development Corporation",
+                "ID": 66,
+                "PCPC_Num": 5
+            },
+            "geometry": {
+                "x": 2695564.7426469177,
+                "y": 236893.43132084608
+            }
+        },
+        {
+            "attributes": {
+                "OBJECTID": 79,
+                "Match_addr": "1034 SPRING ST, 19107",
+                "Corridor": "Chinatown",
+                "Applicant": "Carol Wong",
+                "Business_N": "Chinatown Learning Center",
+                "Property_A": "1034 Spring Street",
+                "SIP_Award": 2500,
+                "Invoice_Ap": 20110804,
+                "Check_Amou": 2440,
+                "Funded_By": "BOND FUND",
+                "Relations": "Philadelphia Chinatown Development Corporation",
+                "ID": 79,
+                "PCPC_Num": 5
+            },
+            "geometry": {
+                "x": 2695370.725318417,
+                "y": 237530.0596407503
+            }
+        }
+    ]
+}
