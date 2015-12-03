@@ -171,14 +171,15 @@ describe('where functions', function () {
   it('within box', function () {
     var query = convert('$where=within_box(location, 46, -122, 47, -123)')
     query.should.have.property('geometryType', 'esriGeometryEnvelope')
-    query.should.have.property('geometry', [-122, 46, -123, 47])
+    query.should.have.property('geometry', '-122, 46, -123, 47')
     query.where.should.be.eql('1 = 1')
   })
 
   // https://dev.socrata.com/docs/functions/within_circle.html
   it('within circle', function () {
     var query = convert('$where=within_circle(location, 47, -122, 500)')
-    query.should.have.property('geometry', [-122, 47])
+    query.should.have.property('geometryType', 'esriGeometryPoint')
+    query.should.have.property('geometry', '-122, 47')
     query.should.have.property('distance', 500)
     // query.should.have.property('units', 'meters') // not documented
     query.where.should.be.eql('1 = 1')
