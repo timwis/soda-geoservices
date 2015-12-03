@@ -21,6 +21,7 @@ Using `https://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services`
 * [/Storefront_Improvement_Programs/FeatureServer/0?relations=Mayfair CDC](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?relations=Mayfair CDC)
 * [/Storefront_Improvement_Programs/FeatureServer/0?$select=funded_by, count(*)&$group=funded_by](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$select=funded_by, count(*)&$group=funded_by)
 * [/Storefront_Improvement_Programs/FeatureServer/0?$select=extent(geometry)](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$select=extent(geometry))
+* [/Storefront_Improvement_Programs/FeatureServer/0?$where=within_circle(geometry, 39.9520, -75.1646, 100)](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$where=within_circle(geometry, 39.9520, -75.1646, 100))
 
 ## Usage
 1. Clone this repo and install dependencies via `npm install`
