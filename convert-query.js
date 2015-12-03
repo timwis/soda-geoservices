@@ -14,29 +14,36 @@ module.exports = function (input) {
     f: 'json'
   }
 
+  // Select
   query.outFields = converters.select(ast.columns, query)
 
+  // Select Aggregation
   if (query.outStatistics) {
     query.outStatistics = JSON.stringify(query.outStatistics)
   }
 
-  if (ast.groupby && ast.groupby.length) {
-    query.groupByFieldsForStatistics = ast.groupby[0].column
-  }
-
+  // Where
   if (ast.where) {
     ast.where = converters.where(ast.where, query)
     query.where = Parser.stringify.where(ast.where)
   }
 
+  // Group by
+  if (ast.groupby && ast.groupby.length) {
+    query.groupByFieldsForStatistics = ast.groupby[0].column
+  }
+
+  // Order by
   if (params.$order) {
     query.orderByFields = params.$order
   }
 
+  // Limit
   if (params.$limit) {
     query.resultRecordCount = params.$limit
   }
 
+  // Offset
   if (params.$offset) {
     query.resultOffset = params.$offset
   }

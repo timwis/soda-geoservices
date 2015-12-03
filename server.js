@@ -3,8 +3,11 @@ var restify = require('restify')
 var request = require('request')
 var qs = require('querystring')
 var _ = { defaults: require('lodash/object/defaults') }
-var convert = require('./convert')
-require('dotenv').load({silent: true})
+;require('dotenv').load({silent: true})
+var convert = {
+  query: require('./convert-query'),
+  response: require('./convert-response')
+}
 
 var DEBUG = process.env.DEBUG || false
 var PORT = process.env.PORT || 8080
@@ -17,7 +20,7 @@ server.use(restify.queryParser())
 // Catch all requests
 server.get(/^\/(.*)/, function (req, res, next) {
   // Construct url
-  var convertedQuery = _.defaults(convert(req.query), DEFAULT_PARAMS)
+  var convertedQuery = _.defaults(convert.query(req.query), DEFAULT_PARAMS)
   var path = req.params[0].replace(/\/$/, '').replace(/query$/, '') // remove trailing slash and trailing /query
   var url = PROXY_TO + '/' + path + '/query'
 
@@ -33,7 +36,7 @@ server.get(/^\/(.*)/, function (req, res, next) {
       console.error('Error making request', response)
     } else {
       // Give the response back
-      res.send(response.statusCode, body)
+      res.send(response.statusCode, convert.response(body))
     }
   })
 })
