@@ -22,6 +22,7 @@ Using `https://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services`
 * [/Storefront_Improvement_Programs/FeatureServer/0?$select=funded_by, count(*)&$group=funded_by](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$select=funded_by, count(*)&$group=funded_by)
 * [/Storefront_Improvement_Programs/FeatureServer/0?$select=extent(geometry)](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$select=extent(geometry))
 * [/Storefront_Improvement_Programs/FeatureServer/0?$where=within_circle(geometry, 39.9520, -75.1646, 100)](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$where=within_circle(geometry, 39.9520, -75.1646, 100))
+* [/Storefront_Improvement_Programs/FeatureServer/0?$where=within_box(geometry, 39.9537, -75.1577, 39.9623, -75.1422)](http://soda-geoservices.herokuapp.com/Storefront_Improvement_Programs/FeatureServer/0?$where=within_box(geometry, 39.9537, -75.1577, 39.9623, -75.1422))
 
 ## Usage
 1. Clone this repo and install dependencies via `npm install`
