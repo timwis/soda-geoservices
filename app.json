@@ -3,7 +3,7 @@
   "description": "Query Esri Geoservices using a SODA2-style API",
   "env": {
     "PROXY_TO": {
-      "description": "ArcGIS REST endpoint to pass converted requests to",
+      "description": "ArcGIS REST endpoint to pass converted requests to, including /arcgis/rest/services/",
       "required": true
     },
     "DEFAULT_PARAMS": {
