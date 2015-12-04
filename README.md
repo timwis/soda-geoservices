@@ -1,5 +1,6 @@
 # SODA GeoServices
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Query [Esri Geoservices](http://geoservices.github.io/) using a [SODA2](https://dev.socrata.com/docs/queries/)-style API
 
