@@ -1,9 +1,7 @@
 /* global describe, it */
 require('should')
 var convert = require('../convert-query')
-// var inspect = function (data) {
-//   console.log(require('util').inspect(data, false, 10, true))
-// }
+var inspect = require('../helpers/inspect')
 
 describe('select', function () {
   it('all fields', function () {
