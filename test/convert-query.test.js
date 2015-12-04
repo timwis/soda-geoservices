@@ -185,8 +185,18 @@ describe('where functions', function () {
     query.where.should.be.eql('1 = 1')
   })
 
-  /* not sure whether to use Multipoint or Polygon
   it('within polygon', function () {
     var query = convert("$where=within_polygon(location, 'MULTIPOLYGON (((-1.1 2.1, -3.1 4.1, -5.1 6.1, -7.1 8.1)))')")
-  })*/
+    query.should.have.property('geometryType', 'esriGeometryPolygon')
+    query.should.have.property('geometry', JSON.stringify({
+      rings: [[
+        [-1.1, 2.1],
+        [-3.1, 4.1],
+        [-5.1, 6.1],
+        [-7.1, 8.1],
+        [-1.1, 2.1] // close the polygon
+      ]],
+      spatialReference: { wkid: 4326 }
+    }))
+  })
 })
