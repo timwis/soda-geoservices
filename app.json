@@ -3,15 +3,15 @@
   "description": "Query Esri Geoservices using a SODA2-style API",
   "env": {
     "PROXY_TO": {
-      "description": "ArcGIS REST endpoint to pass converted requests to, including /arcgis/rest/services/",
+      "description": "ArcGIS REST endpoint to pass converted requests to, ex: http://domain.com/arcgis/rest/services",
       "required": true
     },
     "DEFAULT_PARAMS": {
-      "description": "Querystring parameters to pass along by default, in a=b&c=d format",
+      "description": "Querystring parameters to pass along by default, ex: a=b&c=d",
       "required": false
     },
     "DEBUG": {
-      "description": "Enable debug mode to log activity to console",
+      "description": "Enable debug mode to log activity to console (true or false)",
       "required": false,
       "value": "false"
     }
