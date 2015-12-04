@@ -7,7 +7,7 @@
       "required": true
     },
     "DEFAULT_PARAMS": {
-      "description": "Querystring parameters to pass along by default",
+      "description": "Querystring parameters to pass along by default, in a=b&c=d format",
       "required": false
     },
     "DEBUG": {
