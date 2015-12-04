@@ -11,6 +11,7 @@
   "author": "timwis <tim@timwis.com>",
   "license": "MIT",
   "dependencies": {
+    "checkenv": "^1.0.5",
     "dotenv": "^1.2.0",
     "lodash": "^3.10.1",
     "node-soda2-parser": "github:timwis/node-soda2-parser",

@@ -4,6 +4,7 @@ var request = require('request')
 var qs = require('querystring')
 var _ = { defaults: require('lodash/object/defaults') }
 ;require('dotenv').load({silent: true})
+;require('checkenv').check()
 var convert = {
   query: require('./convert-query'),
   response: require('./convert-response')
