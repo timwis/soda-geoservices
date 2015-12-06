@@ -1,15 +1,11 @@
 {
   "name": "soda-geoservices",
-  "version": "1.0.0",
   "description": "Query Esri Geoservices using a SODA2-style API",
-  "main": "server.js",
-  "scripts": {
-    "lint": "standard --verbose | snazzy",
-    "test": "mocha test",
-    "server": "node server.js"
+  "version": "1.0.0",
+  "author": "Tim Wisniewski <tim@timwis.com>",
+  "bugs": {
+    "url": "https://github.com/timwis/soda-geoservices/issues"
   },
-  "author": "timwis <tim@timwis.com>",
-  "license": "MIT",
   "dependencies": {
     "checkenv": "^1.0.5",
     "dotenv": "^1.2.0",
@@ -25,5 +21,24 @@
     "should": "^7.1.1",
     "snazzy": "^2.0.1",
     "standard": "^5.4.1"
+  },
+  "homepage": "https://github.com/timwis/soda-geoservices#readme",
+  "keywords": [
+    "esri",
+    "geoservices",
+    "query",
+    "soda",
+    "soda2"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timwis/soda-geoservices.git"
+  },
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "start": "node server.js",
+    "test": "mocha test"
   }
 }
