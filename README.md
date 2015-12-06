@@ -29,7 +29,7 @@ Using `https://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services`
 1. Clone this repo and install dependencies via `npm install`
 2. Copy `.env.sample` to `.env` and fill in `PROXY_TO` with the path to your Geoservices (ex. `http://maps2.dcgis.dc.gov/dcgis/rest/services/`)
 and any default parameters in `DEFAULT_PARAMS` in `a=b&c=d` format
-3. Run the server via `npm run server`
+3. Run the server via `npm start`
 4. Append the service to your URL and use SODA2 querystring parameters
 
 For example:
