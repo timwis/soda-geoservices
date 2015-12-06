@@ -4,7 +4,7 @@
 
 Query [Esri Geoservices](http://geoservices.github.io/) using a [SODA2](https://dev.socrata.com/docs/queries/)-style API
 
-This is still a work in progress. Check out the [list of features](https://github.com/timwis/soda-geoservices/issues/1) and 
+This is still a work in progress. Check out the [list of features](https://github.com/timwis/soda-geoservices/issues/1) and
 [tests](test/convert-query.test.js) to get an idea for the functionality.
 
 ## Why?
@@ -46,3 +46,6 @@ http://localhost:8080/DDOT/AlleyConditions/MapServer/0?alley_material=Asphalt
 * [SODA2 Documentation](https://dev.socrata.com/docs/queries/)
 * [Supported functions for ArcGIS Server](http://resources.arcgis.com/en/help/main/10.2/index.html#//015400000686000000) (v10.2)
 * [Validate SQL](https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/APPEALS_LIRB/FeatureServer/0/validateSQL)
+
+## License
+[MIT](LICENSE)
