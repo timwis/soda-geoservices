@@ -2,10 +2,10 @@
   "name": "soda-geoservices",
   "version": "1.0.0",
   "description": "Query Esri Geoservices using a SODA2-style API",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "lint": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
-    "test": "./node_modules/mocha/bin/mocha test",
+    "lint": "standard --verbose | snazzy",
+    "test": "mocha test",
     "server": "node server.js"
   },
   "author": "timwis <tim@timwis.com>",
