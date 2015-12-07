@@ -37,7 +37,12 @@ server.get(/^\/(.*)/, function (req, res, next) {
       console.error('Error making request', response)
     } else {
       // Give the response back
-      res.send(response.statusCode, convert.response(body))
+      if (body.error) {
+        body.error.error = true  // from soda2 spec
+        res.send(body.error.code, body.error)
+      } else {
+        res.send(res.statusCode, convert.response(body))
+      }
     }
   })
 })
