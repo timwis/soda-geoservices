@@ -4,7 +4,7 @@
 
 Query [Esri Geoservices](http://geoservices.github.io/) using a [SODA2](https://dev.socrata.com/docs/queries/)-style API
 
-This is still a work in progress. Check out the [list of features](https://github.com/timwis/soda-geoservices/issues/1) and 
+This is still a work in progress. Check out the [list of features](https://github.com/timwis/soda-geoservices/issues/1) and
 [tests](test/convert-query.test.js) to get an idea for the functionality.
 
 ## Why?
@@ -29,7 +29,7 @@ Using `https://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services`
 1. Clone this repo and install dependencies via `npm install`
 2. Copy `.env.sample` to `.env` and fill in `PROXY_TO` with the path to your Geoservices (ex. `http://maps2.dcgis.dc.gov/dcgis/rest/services/`)
 and any default parameters in `DEFAULT_PARAMS` in `a=b&c=d` format
-3. Run the server via `npm run server`
+3. Run the server via `npm start`
 4. Append the service to your URL and use SODA2 querystring parameters
 
 For example:
@@ -46,3 +46,6 @@ http://localhost:8080/DDOT/AlleyConditions/MapServer/0?alley_material=Asphalt
 * [SODA2 Documentation](https://dev.socrata.com/docs/queries/)
 * [Supported functions for ArcGIS Server](http://resources.arcgis.com/en/help/main/10.2/index.html#//015400000686000000) (v10.2)
 * [Validate SQL](https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/APPEALS_LIRB/FeatureServer/0/validateSQL)
+
+## License
+[MIT](LICENSE)

@@ -1,4 +1,4 @@
-/* global describe, it, before */
+/* global describe, it */
 require('should')
 var convert = require('../convert-response')
 // var inspect = require('../helpers/inspect')
