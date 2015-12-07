@@ -1,6 +1,6 @@
 /* global describe, it */
 require('should')
-var convert = require('../convert-response')
+var convert = require('../response')
 // var inspect = require('../helpers/inspect')
 
 describe('response', function () {

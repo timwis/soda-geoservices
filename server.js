@@ -6,8 +6,8 @@ var _ = { defaults: require('lodash/object/defaults') }
 ;require('dotenv').load({silent: true})
 ;require('checkenv').check()
 var convert = {
-  query: require('./convert-query'),
-  response: require('./convert-response')
+  query: require('./query'),
+  response: require('./response')
 }
 
 var DEBUG = process.env.DEBUG || false

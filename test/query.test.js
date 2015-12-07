@@ -1,6 +1,6 @@
 /* global describe, it */
 require('should')
-var convert = require('../convert-query')
+var convert = require('../query')
 
 describe('select', function () {
   it('all fields', function () {
