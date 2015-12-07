@@ -1,18 +1,27 @@
 var qs = require('querystring')
 var Parser = require('node-soda2-parser')
+var allowedParams = require('./allowed-params.json')  // Geoservices params that should be accepted in addition to SODA2 params
 var converters = {
   select: require('./lib/select'),
   where: require('./lib/where')
 }
 
 module.exports = function (input) {
-  var params = typeof input === 'string' ? qs.parse(input) : input
-  var ast = Parser.parse(params)
   var query = {
     outFields: '*',
     where: '1=1',
     f: 'json'
   }
+
+  // Save allowed params, then parse into AST
+  var params = typeof input === 'string' ? qs.parse(input) : input
+  allowedParams.forEach(function (param) {
+    if (param in params) {
+      query[param] = params[param]
+      delete params[param]
+    }
+  })
+  var ast = Parser.parse(params)
 
   // Select
   query.outFields = converters.select(ast.columns, query)

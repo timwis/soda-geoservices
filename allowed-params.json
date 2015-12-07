@@ -1,0 +1,19 @@
+[
+  "inSR",
+  "outSR",
+  "text",
+  "geometry",
+  "geometryType",
+  "spatialRel",
+  "relationParam",
+  "time",
+  "distance",
+  "returnGeometry",
+  "maxAllowableOffset",
+  "geometryPrecision",
+  "returnZ",
+  "returnM",
+  "gdbVersion",
+  "returnDistinctValues",
+  "returnTrueCurves"
+]
