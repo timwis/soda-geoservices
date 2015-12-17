@@ -37,8 +37,7 @@
     "url": "git+https://github.com/timwis/soda-geoservices.git"
   },
   "scripts": {
-    "lint": "standard --verbose | snazzy",
     "start": "node server.js",
-    "test": "mocha test"
+    "test": "standard --verbose | snazzy && mocha test"
   }
 }
