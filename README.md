@@ -1,5 +1,6 @@
 # SODA GeoServices
 [![Build Status](https://travis-ci.org/timwis/soda-geoservices.svg?branch=master)](https://travis-ci.org/timwis/soda-geoservices)
+[![Coverage Status](https://coveralls.io/repos/timwis/soda-geoservices/badge.svg?branch=master&service=github)](https://coveralls.io/github/timwis/soda-geoservices?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
