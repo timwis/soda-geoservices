@@ -17,6 +17,8 @@
     "terraformer-wkt-parser": "^1.0.1"
   },
   "devDependencies": {
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "should": "^7.1.1",
     "snazzy": "^2.0.1",
@@ -38,6 +40,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "standard --verbose | snazzy && mocha test"
+    "test": "standard --verbose | snazzy && istanbul cover _mocha -- -R spec"
   }
 }
